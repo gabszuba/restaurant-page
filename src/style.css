@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@300;400;600&family=Quicksand:wght@400;700&display=swap");
+:root {
+  /* CSS HEX */
+  --font-color-orange: rgb(205, 121, 9);
+  --font-color-primary: #240d11ff;
+  --bistre: #3b2018ff;
+  --font-color-h1: rgb(167, 73, 39);
+  --nav-hover: #b0824fff;
+  --bg-pearl: #f0e2c5ff;
+  --font-color-nav: #cdc0b3ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--font-color-orange);
+  font-size: 1.3em;
+}
+
+.text-wrapper > p {
+  font-size: 1.2em;
+  padding: 2em 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 0;
+  background-color: var(--bistre);
+}
+
+#content {
+  background-color: var(--bg-pearl);
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.nav-link {
+  border: none;
+  color: var(--font-color-nav);
+  background-color: var(--bistre);
+  cursor: pointer;
+  font-size: 1.3em;
+  padding: 2px 10px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid var(--nav-hover);
+  transform: translateY(-10px); /* Apply a vertical translation on hover */
+}
+
+footer {
+  background-color: var(--bistre);
+  color: var(--font-color-nav);
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../src/assets/background.png");
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o elemento */  
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.text-wrapper {
+  max-width: 960px;
+  margin: 2em 4em;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  color: var(--font-color-h1);
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+}
+
+h1::after,
+.contact-info::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--font-color-h1);
+}
+
+h2 {
+  letter-spacing: -2px;
+  font-size: 2em;
+  font-weight: 300;
+  color: var(--font-color-orange);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Three columns on larger screens */
+  gap: 20px; /* Gap between grid items */
+  width: 70%;
+  padding: 2rem 0;
+}
+
+.contact {
+  padding: 5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  padding: 0.7em;
+  background-color: #f9f7fd;
+  font-weight: 300;
+  font-size: 0.8em;
+  border: 2px solid rgb(196, 178, 178);
+}
+
+.contact-form {
+  margin-top: 1em;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #30323d;
+}
+
+.contact-detail, h3 {
+  font-size: 1.5rem;
+  margin: 1em 0;
+}
+
+.contact-form > button {
+  background-color: #93a3bc; /* Green */
+  color: white;
+  padding: 0.7em 3em;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.contact-form > button:hover {
+  background-color: #30323d;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+input {
+  margin-bottom: 18px;
+}
+
+.h-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
